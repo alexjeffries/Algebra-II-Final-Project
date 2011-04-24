@@ -158,13 +158,76 @@ The University of North Carolina}
 
 \end{example}%{}
 
-\lyxframeend{}\section{Part II}
+\lyxframeend{}\section{Properties of an OHFD}
 
 
-\lyxframeend{}\subsection{Part II}
+\lyxframeend{}\subsection{Definitions}
 
 
-\lyxframeend{}\lyxframe{Part II}
+\lyxframeend{}\lyxframe{Mutually Nondegenerate Irreducible Factorizations}
+\begin{definition}
+Let $R$ be an integral domain. We say that a pair of irreducible factorizations
+\begin{align*}
+\pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots\xi_m
+\end{align*}
+is mutually nondegenerate if the irreducibles $\pi_1 \in R$ and $\xi \in R$ are pairwise non-associate.
+\end{definition}
+
+\lyxframeend{}\lyxframe{Long/Short}
+
+\begin{definition}
+Let $R$ be an atomic domain and $\pi_1 \in R$ an irreducible element. We say that $\pi_1$ is "long" (resp. "short") if there is a pair of mutually nondegenerate irredicible factorizations
+\begin{align*}
+\pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots \xi_m
+\end{align*}
+with $\pi_i, \xi_j \in R$ irreducible and $n > m$ (resp. $n<m$)
+\end{definition}
+
+
+\lyxframeend{}\subsection{Propositions}
+\lyxframe{Lemma 1}
+\begin{lemma}
+Suppose that $R$ is an OHFD and let
+\begin{align*}
+\pi_1\cdots\pi_k=\xi_1\cdots\xi_m
+\end{align*}
+and
+\begin{align*}
+\alpha_1\cdots\alpha_r=\beta_1\cdots\beta_n
+\end{align*}
+be two pairs of mutually nondegenerate irreducible factorizations with $k>m$ and $n>r$. Then each $\pi_i$ is associate to some $\beta_j$ and each $\xi_1$ is associate to some $\alpha_j$. 
+\end{lemma}
+\lyxframeend{}\lyxframe{Proof}
+\begin{itemize}
+\item <1->The proof uses the fact that equal length factorizations are unique.
+\item <2->Let $a = n-r$ and $b = k - m$. In the factorizations:
+\begin{align*}
+\pi_1^a\cdots\pi_k^a\alpha_1^b\cdots\alpha_r^b=\xi_1^a\cdots\xi_m^a\beta_1^b\cdots\beta_n^b
+\end{align*}
+the lengths are the same since $ak+br=am+bn$. 
+\item <3->Therefore, each $\pi_i$ must appear on the right somewhere. Since the $\pi_i$'s and $\xi_j$'s are non-associate, this means that each $\pi_i$ is an associate of one of the $\beta_j$'s. 
+\item<4->The same argument shows that the $\alpha_i$'s and $\xi_j$'s are associates. 
+\end{itemize}
+
+\lyxframeend{}\lyxframe{Lemma 2}
+\begin{lemma}
+Let $R$ be an OHFD that is not a HFD and $\pi \in R$ a nonprime irreducible. Then $\pi$ cannot be both long and short.
+\end{lemma}
+
+
+\lyxframeend{}\lyxframe{Proof}
+\begin{itemize}
+\item <1->Assume that $\pi_1$ is both long and short.
+\item <2->Then, we have two mutually nondegenerate irreducible factorizations of the following form:
+\begin{align*}
+\pi_1\cdots\pi_k=\xi_1\cdots\xi_m
+\end{align*}
+and
+\begin{align*}
+\pi_1\alpha_2\cdots\alpha_r=\beta_1\cdots\beta_n
+\end{align*}
+\item <3->By the previous Lemma, this implies that $\pi_1$ is an associate of one of the $\xi_j$'s. This contradicts the mutual nondegeneracy of the first pair of factorizations.
+\end{itemize}
 
 
 \lyxframeend{}\section{The Main Result}
@@ -372,11 +435,10 @@ which is a contradiction.
 
 \beamertemplatebookbibitems
 \begin{thebibliography}{2}
-\bibitem{Author1990}A. Author. \newblock\emph{Handbook of Everything}.\newblock
-Some Press, 1990.\beamertemplatearticlebibitems
+\bibitem{Coykendall,Smith1990}Coykendall, Jim and Smith, William. \newblock\emph{On Unique Factorization Domains}.\newblock
+Journal of Algebra, 2011.\beamertemplatearticlebibitems
 
-\bibitem{Someone2002}S. Someone.\newblock On this and that\emph{.}
-\newblock\emph{Journal on This and That}. 2(1):50--100, 2000.
+
 
 \end{thebibliography}
 
