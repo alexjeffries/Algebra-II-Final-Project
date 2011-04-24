@@ -1,0 +1,90 @@
+\section{Introduction}
+
+\begin{frame}
+  \frametitle{Overview}
+  \begin{enumerate}
+    \item<1-> The notion of a UFD is generalized in the the spirit of a HFD
+    \item<2-> This generalization implies the notion of a HFD
+    \item<3-> One of the axioms of a UFD is redundant    
+  \end{enumerate}
+\end{frame}
+
+\subsection{Review}
+
+\begin{frame}
+  \frametitle{Review}
+  \begin{definition}
+    If $R$ is a commutative ring, then $a \in R$, $a \neq 0$ is a \alert{zero-divisor} if there exists a $b \in R$, $b \neq 0$, such that $a b = 0$.
+  \end{definition}
+  \pause
+  \begin{definition}
+    A commutative ring is an \alert{integral domain} if it has no zero-divisors.
+  \end{definition}
+\end{frame}
+\begin{frame}
+  \begin{definition}
+    An element $a \in R$ is \alert{unit in $R$} if there exists a $b \in R$ such that $ab = 1$.
+    Note that this is not the same thing as a unit element!
+  \end{definition}
+  \pause
+  \begin{definition}
+    Two elements $a, b \in R$ are \alert{associates} if $a = ub$ where $u$ is a unit in $R$.
+  \end{definition}
+  \pause
+  \begin{definition}
+    An element $a \in R$ which is nonunit is called \alert{irreducible} if, whenever $a = bc$ for $b, c \in R$, then one of $b$ or $c$ must be unit in $R$.
+    Intuitively, this means that irreducible elements cannot be factored in nontrivial ways.
+  \end{definition}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Review}
+  \begin{definition}
+    An integral domain, $R$, is a \alert{unique factorization domain (UFD)} if every nonzero nonunit element in $R$ can be factored into irreducible elements, and if we have
+    $$ \alpha_1 \alpha_2 \cdots \alpha_n = \beta_1 \beta_2 \cdots \beta_m $$
+    with each $\alpha_i, \beta_j$ irreducible in $R$, then
+    \begin{enumerate}[(a)]
+      \item $n = m$
+      \item There is a $\sigma \in S_n$ such that $\alpha_i = u_i \beta_{\sigma(i)}$ for all $1 \leq i \leq n$ where each $u_i$ is a unit of $R$.
+    \end{enumerate}
+  \end{definition}
+\end{frame}
+\begin{frame}
+  \begin{example}
+    Any Euclidean ring is a UFD.
+    Consider $(\mathbb{Z}, \cdot)$ where the factorization of each element is given by its standard prime factorization.
+  \end{example}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Review}
+  \begin{definition}
+    Any domain $R$ with the property that every nonzero nonunit element of $R$ can be factored into irreducibles (or atoms) is said to be \alert{atomic}.
+  \end{definition}
+  \pause
+  \begin{itemize}
+    \item A $UFD$ is an atomic domain that additionally satisfies the previous axioms (a) and (b).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Previous Results}
+  \begin{itemize}
+    \item<1-> In 1960, the notion of the half-factorial property first appeared in a paper by Carlitz.
+    \item<2-> In 1976, Zaks generalized the results of Carlitz and coined the term \emph{half-factorial domain}.
+    \item<3-> Typically, half-factorial domains are only concerned with axiom (a) of a UFD.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Main definition}
+  \begin{definition}
+    An atomic integral domain $R$ is an \alert{other-half factorization domain (OHFD)} if, whenever,
+    $$ \alpha_1 \alpha_2 \cdots \alpha_n = \beta_1 \beta_2 \cdots \beta_n $$
+    with each $\alpha_i, \beta_j$ irreducible in $R$, then there is a $\sigma \in S_n$ such that $\alpha_i = u_i \beta_{\sigma(i)}$ for all $1 \leq i \leq n$ where each $u_i$ is a unit of $R$.
+  \end{definition}
+  \pause
+  \begin{itemize}
+    \item In a $OHFD$, each element may have many factorizations of different lengths, but given a positive integer $n$, the element has an unique factorization of length $n$.
+  \end{itemize}
+\end{frame}
