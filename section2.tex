@@ -9,7 +9,7 @@
     \begin{align*}
       \pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots\xi_m
     \end{align*}
-    is mutually nondegenerate if the irreducibles $\pi_1 \in R$ and $\xi \in R$ are pairwise non-associate.
+    is \alert{mutually nondegenerate} if the irreducibles $\pi_1 \in R$ and $\xi \in R$ are pairwise non-associate.
   \end{definition}
 \end{frame}
 
@@ -17,7 +17,7 @@
   \frametitle{Long/Short}
   \begin{definition}
     Let $R$ be an atomic domain and $\pi_1 \in R$ an irreducible element.
-    We say that $\pi_1$ is "long" (resp. "short") if there is a pair of mutually nondegenerate irredicible factorizations
+    We say that $\pi_1$ is \alert{long} (resp. \alert{short}) if there is a pair of mutually nondegenerate irredicible factorizations
     \begin{align*}
       \pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots \xi_m
     \end{align*}
@@ -89,44 +89,37 @@
 
 \begin{frame}
   \frametitle{Master Factorization }
-  \begin{definition}%{}
-    Let $R$ be an OHFD, and let $\{\pi_{1},\pi_{2},\ldots,\pi_{k}\}$and
-    $\{\xi_{1},\xi_{2},\ldots,\xi_{m}\}$ respictevly denote the sets
-    of long and short irreducibles in $R$ (up to associates). Among all
-    pairs of factorizations
+  \begin{definition}
+    Let $R$ be an OHFD, and let $\{\pi_{1},\pi_{2},\ldots,\pi_{k}\}$ and $\{\xi_{1},\xi_{2},\ldots,\xi_{m}\}$ respictevly denote the sets of long and short irreducibles in $R$ (up to associates).
+    Among all pairs of factorizations
 
     \begin{align*}
       \pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}
     \end{align*}
 
-    we select one with $a_{1}$ minimal and call this pair of factorizations
-    the master factorization.
-
-
-  \end{definition}%{}
-
+    we select one with $a_{1}$ minimal and call this pair of factorizations the \alert{master factorization}.
+  \end{definition}
 \end{frame}
 
 \begin{frame}
   \frametitle{An Interesting Result }
-  \begin{fact}%{}
+  \begin{fact}
     Let $R$ be a an OHFD and let
 
     \begin{align*}
       \pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}
     \end{align*}
 
-    be the MF. Then any pair of mutually irreducible factorizations of
-    this MF. That is, any two mutually nondegenerate irreducible factroizations
-    of different lenghts are of the form (up to associates):
+    be the MF.
+    Then any pair of mutually irreducible factorizations of this MF.
+    That is, any two mutually nondegenerate irreducible factroizations of different lenghts are of the form (up to associates):
 
     \begin{align*}
       \pi_{1}^{ta_{1}}\pi_{2}^{ta_{2}}\cdots\pi_{k}^{ta_{k}}= & \xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}
     \end{align*}
 
     for some $t\geq1$.
-  \end{fact}%{}
-
+  \end{fact}
 \end{frame}
 
 \subsection{The Main Result}
@@ -142,8 +135,7 @@
 \begin{frame}
   \frametitle{The Proof}
 
-  First, assume that $R$ is and OHFD that is not an HFD. Let the MF
-  of $R$ be 
+  First, assume that $R$ is and OHFD that is not an HFD. Let the MF of $R$ be 
 
   \begin{align*}
     \pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}
@@ -165,8 +157,7 @@
 
   \pause{}
   \begin{itemize}
-    \item Noting that $\xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}=\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}$,
-      we see that $\pi_{1}$divides this product. 
+    \item Noting that $\xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}=\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}$, we see that $\pi_{1}$divides this product. 
   \end{itemize}
 
   \pause{}
@@ -179,20 +170,17 @@
 \begin{frame}
   \frametitle{The Proof}
   \begin{itemize}
-    \item If $\pi_{1}$does divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
-      then there is some $c\in R$ such that $c\pi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+    \item If $\pi_{1}$does divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$ then there is some $c\in R$ such that $c\pi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
   \end{itemize}
 
   \pause{}
   \begin{itemize}
-    \item If we factor $c$ we see that the factorizations are of unequal lengths;
-      $\pi_{1}$ is long so the LHS of this is the long side.
+    \item If we factor $c$ we see that the factorizations are of unequal lengths; $\pi_{1}$ is long so the LHS of this is the long side.
   \end{itemize}
 
   \pause{}
   \begin{itemize}
-    \item By the fact we mentioned, we have $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}=\xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}$
-      for some $t$, which implies that $\xi_{1}$ divides $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
+    \item By the fact we mentioned, we have $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}=\xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}$ for some $t$, which implies that $\xi_{1}$ divides $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
   \end{itemize}
 \end{frame}
 
@@ -204,14 +192,12 @@
 
   \pause{}
   \begin{itemize}
-    \item Given that $\xi_{1}$ is short, the above factorizations must be either
-      mutually degenerate or of equal lengths.
+    \item Given that $\xi_{1}$ is short, the above factorizations must be either mutually degenerate or of equal lengths.
   \end{itemize}
 
   \pause{}
   \begin{itemize}
-    \item Either, way, $\xi_{1}$ is an associate of one of the $\xi_{i}'s$
-      on the RHS. This is a contradiction so $\pi_{1}$does not divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+    \item Either, way, $\xi_{1}$ is an associate of one of the $\xi_{i}'s$ on the RHS. This is a contradiction so $\pi_{1}$does not divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
   \end{itemize}
 \end{frame}
 
@@ -223,10 +209,7 @@
 
   \pause{}
   \begin{itemize}
-    \item We can factor $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ into $\alpha_{1},\ldots,\alpha_{s}$
-      and $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})$
-      into $\beta_{1},\ldots,\beta_{t}$where the $\alpha_{1}'s$ and $\beta_{i}'s$
-      are irreducible. 
+    \item We can factor $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ into $\alpha_{1},\ldots,\alpha_{s}$ and $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})$ into $\beta_{1},\ldots,\beta_{t}$where the $\alpha_{1}'s$ and $\beta_{i}'s$ are irreducible. 
   \end{itemize}
 
   \pause{}
@@ -238,9 +221,7 @@
 \begin{frame}
   \frametitle{The Proof}
   \begin{itemize}
-    \item Since $\pi_{1}$is not associated to any other $\pi_{i}'s$ from the
-      previous argument, $\pi_{1}$ is not associated to any of the $\alpha_{1},\ldots,\alpha_{s}$or
-      $\beta_{1},\ldots,\beta_{t}$. 
+    \item Since $\pi_{1}$is not associated to any other $\pi_{i}'s$ from the previous argument, $\pi_{1}$ is not associated to any of the $\alpha_{1},\ldots,\alpha_{s}$ or $\beta_{1},\ldots,\beta_{t}$. 
   \end{itemize}
 
   \pause{}
@@ -254,9 +235,7 @@
 
   \pause{}
   \begin{itemize}
-    \item Again, we use the fact we stated and observe that $\xi_{1}$divides
-      $\alpha_{1}\cdots\alpha_{s}$$\beta_{1}\cdots\beta_{t}$, and in particular,
-      $\xi_{1}$divides $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ or $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}).$
+    \item Again, we use the fact we stated and observe that $\xi_{1}$divides $\alpha_{1}\cdots\alpha_{s}$$\beta_{1}\cdots\beta_{t}$, and in particular, $\xi_{1}$divides $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ or $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}).$
     \item This means that $\xi_{1}$divides $\pi_{1}^{a_{1}}$ or $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
   \end{itemize}
 \end{frame}
@@ -265,9 +244,8 @@
   \frametitle{The Proof}
   \begin{itemize}
     \item If $\xi_{1}$ divides $\pi_{1}^{a_{1}}$ then $\pi_{1}^{a_{1}}=c\xi_{1}$.
-      The factorizations are of different lengths. As we have done before,
-      this leads to a contradiction since $\pi_{1}$ is not associated to
-      the other $\pi_{i}^{'}s$. 
+      The factorizations are of different lengths.
+      As we have done before, this leads to a contradiction since $\pi_{1}$ is not associated to the other $\pi_{i}^{'}s$. 
   \end{itemize}
 
   \pause{}
