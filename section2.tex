@@ -234,3 +234,36 @@
     \end{itemize}
   \end{proof}
 \end{frame}
+
+\subsection{Consequences}
+
+\begin{frame}
+  \frametitle{A Shocking Result}
+  \begin{theorem}
+    An integral domain is an OHFD if and only if it as a UFD.
+  \end{theorem}
+  \pause{}
+  \begin{proof}
+    \begin{itemize}
+      \item<1-> The $(\Leftarrow)$ direction is trivial.
+      \item<2-> By the previous theorem, an OHFD is a HFD. 
+      \item<3-> These two together imply that it is a UFD.
+    \end{itemize}
+  \end{proof}
+\end{frame}
+
+\begin{frame}
+  \frametitle{A New Definition}
+  \begin{fact}
+    We can thus modify the definition of a UFD to only include the OHFD axiom.
+  \end{fact}
+  \pause{}
+  \begin{definition}
+    An integral domain, $R$, is a \alert{unique factorization domain (UFD)} if every nonzero nonunit element in $R$ can be factored into irreducible elements, and if we have
+    $$ \alpha_1 \alpha_2 \cdots \alpha_n = \beta_1 \beta_2 \cdots \beta_m $$
+    with each $\alpha_i, \beta_j$ irreducible in $R$, then
+    \begin{enumerate}[(a)]
+      \item There is a $\sigma \in S_n$ such that $\alpha_i = u_i \beta_{\sigma(i)}$ for all $1 \leq i \leq n$ where each $u_i$ is a unit of $R$.
+    \end{enumerate}
+  \end{definition}
+\end{frame}
