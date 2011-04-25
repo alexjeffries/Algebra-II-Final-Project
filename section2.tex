@@ -6,9 +6,7 @@
   \frametitle{Mutually Nondegenerate Irreducible Factorizations}
   \begin{definition}
     Let $R$ be an integral domain. We say that a pair of irreducible factorizations
-    \begin{align*}
-      \pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots\xi_m
-    \end{align*}
+      $$\pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots\xi_m$$
     is \alert{mutually nondegenerate} if the irreducibles $\pi_i \in R$ and $\xi_j \in R$ are pairwise non-associate.
   \end{definition}
   \begin{example}
@@ -24,9 +22,7 @@
   \begin{definition}
     Let $R$ be an atomic domain and $\pi_1 \in R$ an irreducible element.
     We say that $\pi_1$ is \alert{long} (resp. \alert{short}) if there is a pair of mutually nondegenerate irreducible factorizations
-    \begin{align*}
-      \pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots \xi_m
-    \end{align*}
+      $$\pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots \xi_m$$
     with $\pi_i, \xi_j \in R$ irreducible and $n > m$ (resp. $n<m$)
   \end{definition}
 \end{frame}
@@ -37,13 +33,9 @@
   \frametitle{Lemma 1}
   \begin{lemma}
     Suppose that $R$ is an OHFD and let
-    \begin{align*}
-      \pi_1\cdots\pi_k=\xi_1\cdots\xi_m
-    \end{align*}
-    and
-    \begin{align*}
-      \alpha_1\cdots\alpha_r=\beta_1\cdots\beta_n
-    \end{align*}
+      $$\pi_1\cdots\pi_k=\xi_1\cdots\xi_m$$
+      and
+      $$\alpha_1\cdots\alpha_r=\beta_1\cdots\beta_n$$
     be two pairs of mutually nondegenerate irreducible factorizations with $k>m$ and $n>r$.
     Then each $\pi_i$ is associate to some $\beta_j$ and each $\xi_1$ is associate to some $\alpha_j$. 
   \end{lemma}
@@ -55,9 +47,7 @@
     \begin{itemize}
       \item <1->The proof uses the fact that equal length factorizations are unique.
       \item <2->Let $a = n-r$ and $b = k - m$. In the factorizations:
-	\begin{align*}
-	  \pi_1^a\cdots\pi_k^a\alpha_1^b\cdots\alpha_r^b=\xi_1^a\cdots\xi_m^a\beta_1^b\cdots\beta_n^b
-	\end{align*}
+	  $$\pi_1^a\cdots\pi_k^a\alpha_1^b\cdots\alpha_r^b=\xi_1^a\cdots\xi_m^a\beta_1^b\cdots\beta_n^b$$
 	the lengths are the same since $ak+br=am+bn$. 
       \item <3->
 	Therefore, each $\pi_i$ must appear on the right somewhere.
@@ -80,13 +70,9 @@
     \begin{itemize}
       \item <1->Assume that $\pi_1$ is both long and short.
       \item <2->Then, we have two mutually nondegenerate irreducible factorizations of the following form:
-	\begin{align*}
-	  \pi_1\cdots\pi_k=\xi_1\cdots\xi_m
-	\end{align*}
+	  $$\pi_1\cdots\pi_k=\xi_1\cdots\xi_m$$
 	and
-	\begin{align*}
-	  \pi_1\alpha_2\cdots\alpha_r=\beta_1\cdots\beta_n
-	\end{align*}
+	  $$\pi_1\alpha_2\cdots\alpha_r=\beta_1\cdots\beta_n$$
       \item <3->By the previous Lemma, this implies that $\pi_1$ is an associate of one of the $\xi_j$'s.
 	This contradicts the mutual nondegeneracy of the first pair of factorizations.
     \end{itemize}
@@ -109,11 +95,7 @@
   \begin{definition}
     Let $R$ be an OHFD, and let $\{\pi_{1},\pi_{2},\ldots,\pi_{k}\}$ and $\{\xi_{1},\xi_{2},\ldots,\xi_{m}\}$ respectively denote the sets of long and short irreducibles in $R$ (up to associates).
     Among all pairs of factorizations
-
-    \begin{align*}
-      \pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}
-    \end{align*}
-
+      $$\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}=  \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}$$
     we select one with $a_{1}$ minimal and call this pair of factorizations the \alert{master factorization (MF)}.
   \end{definition}
 \end{frame}
@@ -123,17 +105,13 @@
   \begin{fact}
     Let $R$ be a an OHFD and let
 
-    \begin{align*}
-      \pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}
-    \end{align*}
+      $$\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}=  \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}$$
 
     be the MF.
     Then any pair of mutually irreducible factorizations of this MF are powers.
     That is, any two mutually nondegenerate irreducible factorizations of different lengths are of the form (up to associates):
 
-    \begin{align*}
-      \pi_{1}^{ta_{1}}\pi_{2}^{ta_{2}}\cdots\pi_{k}^{ta_{k}}= & \xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}
-    \end{align*}
+      $$\pi_{1}^{ta_{1}}\pi_{2}^{ta_{2}}\cdots\pi_{k}^{ta_{k}}=  \xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}$$
 
     for some $t\geq1$.
   \end{fact}
@@ -160,9 +138,7 @@
   \begin{proof}
     First, assume that $R$ is and OHFD that is not an HFD. Let the MF of $R$ be 
 
-    \begin{align*}
-      \pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}
-    \end{align*}
+      $$\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}=  \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}$$
 
     with $\sum_{i=1}^{k}a_{i}>\sum_{i=1}^{m}b_{i}$
     \noqedsymbol
@@ -224,9 +200,7 @@
     \begin{itemize}
       \item<1-> From the previous argument, $\pi_{1}$ is not associated to any of the $\alpha_{1},\ldots,\alpha_{s}$ or $\beta_{1},\ldots,\beta_{t}$. 
       \item<2-> So, these are factorizations of different lengths, and in the factorization:
-	\begin{align*}
-	  (\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}) & =k\pi_{1}
-	\end{align*}
+	  $$(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}) =k\pi_{1}$$
 	The RHS is the long side. 
       \item<3-> Again, we use the fact we stated and observe that $\xi_{1}$divides $\alpha_{1}\cdots\alpha_{s}$$\beta_{1}\cdots\beta_{t}$, and in particular, $\xi_{1}$divides $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ or $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}).$
       \item<4-> This means that $\xi_{1}$divides $\pi_{1}^{a_{1}}$ or $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
