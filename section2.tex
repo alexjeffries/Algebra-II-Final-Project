@@ -44,19 +44,21 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Proof}
-  \begin{itemize}
-    \item <1->The proof uses the fact that equal length factorizations are unique.
-    \item <2->Let $a = n-r$ and $b = k - m$. In the factorizations:
-      \begin{align*}
-	\pi_1^a\cdots\pi_k^a\alpha_1^b\cdots\alpha_r^b=\xi_1^a\cdots\xi_m^a\beta_1^b\cdots\beta_n^b
-      \end{align*}
-      the lengths are the same since $ak+br=am+bn$. 
-    \item <3->
-      Therefore, each $\pi_i$ must appear on the right somewhere.
-      Since the $\pi_i$'s and $\xi_j$'s are non-associate, this means that each $\pi_i$ is an associate of one of the $\beta_j$'s. 
-    \item<4->The same argument shows that the $\alpha_i$'s and $\xi_j$'s are associates. 
-  \end{itemize}
+  \frametitle{Proof of Lemma 1}
+  \begin{proof}
+    \begin{itemize}
+      \item <1->The proof uses the fact that equal length factorizations are unique.
+      \item <2->Let $a = n-r$ and $b = k - m$. In the factorizations:
+	\begin{align*}
+	  \pi_1^a\cdots\pi_k^a\alpha_1^b\cdots\alpha_r^b=\xi_1^a\cdots\xi_m^a\beta_1^b\cdots\beta_n^b
+	\end{align*}
+	the lengths are the same since $ak+br=am+bn$. 
+      \item <3->
+	Therefore, each $\pi_i$ must appear on the right somewhere.
+	Since the $\pi_i$'s and $\xi_j$'s are non-associate, this means that each $\pi_i$ is an associate of one of the $\beta_j$'s. 
+      \item<4->The same argument shows that the $\alpha_i$'s and $\xi_j$'s are associates. 
+    \end{itemize}
+  \end{proof}
 \end{frame}
 
 \begin{frame}
@@ -67,27 +69,29 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Proof}
-  \begin{itemize}
-    \item <1->Assume that $\pi_1$ is both long and short.
-    \item <2->Then, we have two mutually nondegenerate irreducible factorizations of the following form:
-      \begin{align*}
-	\pi_1\cdots\pi_k=\xi_1\cdots\xi_m
-      \end{align*}
-      and
-      \begin{align*}
-	\pi_1\alpha_2\cdots\alpha_r=\beta_1\cdots\beta_n
-      \end{align*}
-    \item <3->By the previous Lemma, this implies that $\pi_1$ is an associate of one of the $\xi_j$'s.
-      This contradicts the mutual nondegeneracy of the first pair of factorizations.
-  \end{itemize}
+  \frametitle{Proof of Lemma 2}
+  \begin{proof}
+    \begin{itemize}
+      \item <1->Assume that $\pi_1$ is both long and short.
+      \item <2->Then, we have two mutually nondegenerate irreducible factorizations of the following form:
+	\begin{align*}
+	  \pi_1\cdots\pi_k=\xi_1\cdots\xi_m
+	\end{align*}
+	and
+	\begin{align*}
+	  \pi_1\alpha_2\cdots\alpha_r=\beta_1\cdots\beta_n
+	\end{align*}
+      \item <3->By the previous Lemma, this implies that $\pi_1$ is an associate of one of the $\xi_j$'s.
+	This contradicts the mutual nondegeneracy of the first pair of factorizations.
+    \end{itemize}
+  \end{proof}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Finitely Many Long/Short}
-	\begin{fact}
-		Let $R$ be an OHFD, then $R$ has only finitely many long (resp. short) irreducibles.
-	\end{fact}
+  \frametitle{Finitely Many Long/Short}
+  \begin{fact}
+    Let $R$ be an OHFD, then $R$ has only finitely many long (resp. short) irreducibles.
+  \end{fact}
 \end{frame}
 
 \section{The Main Result}
@@ -131,11 +135,10 @@
 
 \subsection{The Main Result}
 \begin{frame}
-
-	\frametitle{The Result}
-	\begin{theorem}
-	If $R$ is an OHFD, then it is an HFD.
-	\end{theorem}
+  \frametitle{The Result}
+  \begin{theorem}
+    If $R$ is an OHFD, then it is an HFD.
+  \end{theorem}
 \end{frame}
 
 \begin{frame}
@@ -149,15 +152,14 @@
 \begin{frame}
   \frametitle{The Proof}
   \begin{proof}
+    First, assume that $R$ is and OHFD that is not an HFD. Let the MF of $R$ be 
 
-  First, assume that $R$ is and OHFD that is not an HFD. Let the MF of $R$ be 
+    \begin{align*}
+      \pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}
+    \end{align*}
 
-  \begin{align*}
-    \pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}
-  \end{align*}
-
-  with $\sum_{i=1}^{k}a_{i}>\sum_{i=1}^{m}b_{i}$
-  \noqedsymbol
+    with $\sum_{i=1}^{k}a_{i}>\sum_{i=1}^{m}b_{i}$
+    \noqedsymbol
   \end{proof}
 \end{frame}
 
