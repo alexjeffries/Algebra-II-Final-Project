@@ -139,7 +139,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{The Proof}
+  \frametitle{An overview of the Proof}
   \begin{itemize}
     \item To prove this, we assume that $R$ is an OHFD, but not an HFD, then show that the MF must not exist, which is a contradiction.
     \item This is done in three cases, but we only discuss one case.
@@ -148,6 +148,7 @@
 
 \begin{frame}
   \frametitle{The Proof}
+  \begin{proof}
 
   First, assume that $R$ is and OHFD that is not an HFD. Let the MF of $R$ be 
 
@@ -156,131 +157,96 @@
   \end{align*}
 
   with $\sum_{i=1}^{k}a_{i}>\sum_{i=1}^{m}b_{i}$
+  \noqedsymbol
+  \end{proof}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Proof}
-  \begin{itemize}
-    \item Of the three cases, we consider the case where $k,m \geq 2$
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Consider the element $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})$
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Noting that $\xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}=\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}$, we see that $\pi_{1}$divides this product. 
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Not as easy to see, $\pi_{1}$divides neither $\xi_{1}^{b_{1}}$ nor
-      $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
-  \end{itemize}
+  \begin{proof}
+    \begin{itemize}
+      \item<1-> Of the three cases, we consider the case where $k,m \geq 2$
+      \item<2-> Consider the element $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})$
+      \item<3-> Noting that $\xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}=\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}$, we see that $\pi_{1}$divides this product. 
+      \item<4-> Not as easy to see, $\pi_{1}$divides neither $\xi_{1}^{b_{1}}$ nor $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+    \end{itemize}
+    \noqedsymbol
+  \end{proof}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Proof}
-  \begin{itemize}
-    \item If $\pi_{1}$does divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$ then there is some $c\in R$ such that $c\pi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Since $\pi_1$ is not an associate of any of the $\xi_j$'s, after factoring $c$, we see that the factorizations are of unequal lengths.
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item By the fact we mentioned, we have $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}=\xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}$ for some $t$, which implies that $\xi_{1}$ divides $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
-  \end{itemize}
+  \begin{proof}
+    \begin{itemize}
+      \item<1-> If $\pi_{1}$does divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$ then there is some $c\in R$ such that $c\pi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+      \item<2-> Since $\pi_1$ is not an associate of any of the $\xi_j$'s, after factoring $c$, we see that the factorizations are of unequal lengths.
+      \item<3-> By the fact we mentioned, we have $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}=\xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}$ for some $t$, which implies that $\xi_{1}$ divides $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
+    \end{itemize}
+    \noqedsymbol
+  \end{proof}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Proof}
-  \begin{itemize}
-    \item So we have some $d\in R$ such that $d\xi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Given that $\xi_{1}$ is short, the above factorizations must be either mutually degenerate or of equal lengths.
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Either way, $\xi_{1}$ is an associate of one of the $\xi_{i}$'s on the RHS. This is a contradiction so $\pi_{1}$does not divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
-  \end{itemize}
+  \begin{proof}
+    \begin{itemize}
+      \item<1-> So we have some $d\in R$ such that $d\xi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+      \item<2-> Given that $\xi_{1}$ is short, the above factorizations must be either mutually degenerate or of equal lengths.
+      \item<3-> Either way, $\xi_{1}$ is an associate of one of the $\xi_{i}$'s on the RHS. This is a contradiction so $\pi_{1}$does not divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+    \end{itemize}
+    \noqedsymbol
+  \end{proof}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Proof}
-  \begin{itemize}
-    \item So, $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})=k\pi_{1}$
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item We can factor $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ into $\alpha_{1}\ldots\alpha_{s}$ and $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})$ into $\beta_{1}\ldots\beta_{t}$where the $\alpha_{1}$'s and $\beta_{i}$'s are irreducible. 
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Thus, $\alpha_{1}\cdots\alpha_{s}$$\beta_{1}\cdots\beta_{t}=k\pi_{1}$ 
-  \end{itemize}
+  \begin{proof}
+    \begin{itemize}
+      \item<1-> So, $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})=k\pi_{1}$
+      \item<2-> We can factor $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ into $\alpha_{1}\ldots\alpha_{s}$ and $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})$ into $\beta_{1}\ldots\beta_{t}$where the $\alpha_{1}$'s and $\beta_{i}$'s are irreducible. 
+      \item<3-> Thus, $\alpha_{1}\cdots\alpha_{s}$$\beta_{1}\cdots\beta_{t}=k\pi_{1}$ 
+    \end{itemize}
+    \noqedsymbol
+  \end{proof}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Proof}
-  \begin{itemize}
-    \item From the previous argument, $\pi_{1}$ is not associated to any of the $\alpha_{1},\ldots,\alpha_{s}$ or $\beta_{1},\ldots,\beta_{t}$. 
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item So, these are factorizations of different lengths, and in the factorization:
-      \begin{align*}
-	(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}) & =k\pi_{1}
-      \end{align*}
-      The RHS is the long side. 
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Again, we use the fact we stated and observe that $\xi_{1}$divides $\alpha_{1}\cdots\alpha_{s}$$\beta_{1}\cdots\beta_{t}$, and in particular, $\xi_{1}$divides $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ or $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}).$
-    \item This means that $\xi_{1}$divides $\pi_{1}^{a_{1}}$ or $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
-  \end{itemize}
+  \begin{proof}
+    \begin{itemize}
+      \item<1-> From the previous argument, $\pi_{1}$ is not associated to any of the $\alpha_{1},\ldots,\alpha_{s}$ or $\beta_{1},\ldots,\beta_{t}$. 
+      \item<2-> So, these are factorizations of different lengths, and in the factorization:
+	\begin{align*}
+	  (\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}) & =k\pi_{1}
+	\end{align*}
+	The RHS is the long side. 
+      \item<3-> Again, we use the fact we stated and observe that $\xi_{1}$divides $\alpha_{1}\cdots\alpha_{s}$$\beta_{1}\cdots\beta_{t}$, and in particular, $\xi_{1}$divides $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ or $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}).$
+      \item<4-> This means that $\xi_{1}$divides $\pi_{1}^{a_{1}}$ or $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
+    \end{itemize}
+    \noqedsymbol
+  \end{proof}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Proof}
-  \begin{itemize}
-    \item If $\xi_{1}$ divides $\pi_{1}^{a_{1}}$ then $\pi_{1}^{a_{1}}=c\xi_{1}$.
-      The factorizations are of different lengths.
-      As we have done before, this leads to a contradiction since $\pi_{1}$ is not associated to the other $\pi_{i}$'s. 
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item Otherwise, $c\xi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item This means that $\xi_{1}$is associated with one of the $\xi_{i}$'s which is a contradiction.
-  \end{itemize}
+  \begin{proof}
+    \begin{itemize}
+      \item<1-> If $\xi_{1}$ divides $\pi_{1}^{a_{1}}$ then $\pi_{1}^{a_{1}}=c\xi_{1}$.
+	The factorizations are of different lengths.
+	As we have done before, this leads to a contradiction since $\pi_{1}$ is not associated to the other $\pi_{i}$'s. 
+      \item<2-> Otherwise, $c\xi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+      \item<3-> This means that $\xi_{1}$is associated with one of the $\xi_{i}$'s which is a contradiction.
+    \end{itemize}
+    \noqedsymbol
+  \end{proof}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Proof}
-  \begin{itemize}
-    \item Therefore, we have no MFs of this form.
-  \end{itemize}
-
-  \pause{}
-  \begin{itemize}
-    \item The proof for the other two cases are similar. 
-  \end{itemize}
+  \begin{proof}
+    \begin{itemize}
+      \item<1-> Therefore, we have no MFs of this form.
+      \item<2-> The proof for the other two cases are similar. 
+    \end{itemize}
+  \end{proof}
 \end{frame}
