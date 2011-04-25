@@ -1,0 +1,446 @@
+%% LyX 1.6.5 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{beamer}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%%TEST1
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\DeclareRobustCommand*{\lyxarrow}{%
+\@ifstar
+{\leavevmode\,$\triangleleft$\,\allowbreak}
+{\leavevmode\,$\triangleright$\,\allowbreak}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % this default might be overridden by plain title styl
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ \AtBeginDocument{
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+ \makeatletter
+ \long\def\lyxframe#1{\@lyxframe#1\@lyxframestop}%
+ \def\@lyxframe{\@ifnextchar<{\@@lyxframe}{\@@lyxframe<*>}}%
+ \def\@@lyxframe<#1>{\@ifnextchar[{\@@@lyxframe<#1>}{\@@@lyxframe<#1>[]}}
+ \def\@@@lyxframe<#1>[{\@ifnextchar<{\@@@@@lyxframe<#1>[}{\@@@@lyxframe<#1>[<*>][}}
+ \def\@@@@@lyxframe<#1>[#2]{\@ifnextchar[{\@@@@lyxframe<#1>[#2]}{\@@@@lyxframe<#1>[#2][]}}
+ \long\def\@@@@lyxframe<#1>[#2][#3]#4\@lyxframestop#5\lyxframeend{%
+   \frame<#1>[#2][#3]{\frametitle{#4}#5}}
+ \makeatother
+ \def\lyxframeend{} % In case there is a superfluous frame end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usetheme{Warsaw}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+\makeatother
+
+\usepackage{babel}
+
+\begin{document}
+
+
+
+
+
+\title[On UFD's]{On Unique Factorization Domains}
+
+
+\author{Jim Coykendall\inst{1} \and William W. Smith\inst{2}}
+
+
+\institute{\inst{1}Department Mathematics\\
+North Dakota State University\and \inst{2}Department of Mathematics\\
+The University of North Carolina}
+
+
+\date{Algebra II Final Project, 2011}
+
+\makebeamertitle
+
+
+%\pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+
+%\logo{\pgfuseimage{institution-logo}}
+
+
+
+\AtBeginSubsection[]{
+
+  \frame<beamer>{ 
+
+    \frametitle{Outline}   
+
+    \tableofcontents[currentsection,currentsubsection] 
+
+  }
+
+}
+
+
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\lyxframeend{}\lyxframe{Outline}
+
+\tableofcontents{}
+
+
+
+
+\lyxframeend{}\section{Motivation}
+
+
+\lyxframeend{}\subsection[BasProblem]{The Basic Problem That We Studied}
+
+
+\lyxframeend{}\lyxframe{Make Titles Informative. Use Uppercase Letters.}
+
+
+\framesubtitle{Frame subtitles are optional. Use upper- or lowercase letters.}
+\begin{itemize}
+\item Use Itemize a lot.
+
+
+\pause{}
+
+\item Use very short sentences or short phrases.
+
+
+\pause{}
+
+\item These overlays are created using the Pause style.
+\end{itemize}
+
+\lyxframeend{}\lyxframe{Make Titles Informative. }
+\begin{itemize}
+\item <1->You can also use overlay specifications to create overlays.
+\item <3->This allows you to present things in any order.
+\item <2->This is shown second.
+\end{itemize}
+
+\lyxframeend{}\lyxframe{Make Titles Informative.}
+\begin{block}
+<1->{}
+\begin{itemize}
+\item Untitled block.
+\item Shown on all slides.
+\end{itemize}
+\end{block}
+\begin{exampleblock}
+<2->{Some Example Block Title}
+\begin{itemize}
+\item $e^{i\pi}=-1$.
+\item $e^{i\pi/2}=i$.
+\end{itemize}
+\end{exampleblock}
+
+\lyxframeend{}\subsection{Previous Work}
+
+
+\lyxframeend{}\lyxframe{Make Titles Informative. }
+\begin{example}%{}
+<1->On first slide. 
+\end{example}%{}
+
+\begin{example}%{}
+<2->On second slide.
+
+
+\end{example}%{}
+
+\lyxframeend{}\section{Properties of an OHFD}
+
+
+\lyxframeend{}\subsection{Definitions}
+
+
+\lyxframeend{}\lyxframe{Mutually Nondegenerate Irreducible Factorizations}
+\begin{definition}
+Let $R$ be an integral domain. We say that a pair of irreducible factorizations
+\begin{align*}
+\pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots\xi_m
+\end{align*}
+is mutually nondegenerate if the irreducibles $\pi_1 \in R$ and $\xi \in R$ are pairwise non-associate.
+\end{definition}
+
+\lyxframeend{}\lyxframe{Long/Short}
+
+\begin{definition}
+Let $R$ be an atomic domain and $\pi_1 \in R$ an irreducible element. We say that $\pi_1$ is "long" (resp. "short") if there is a pair of mutually nondegenerate irredicible factorizations
+\begin{align*}
+\pi_1\pi_2\cdots\pi_n = \xi_1\xi_2\cdots \xi_m
+\end{align*}
+with $\pi_i, \xi_j \in R$ irreducible and $n > m$ (resp. $n<m$)
+\end{definition}
+
+
+\lyxframeend{}\subsection{Propositions}
+\lyxframe{Lemma 1}
+\begin{lemma}
+Suppose that $R$ is an OHFD and let
+\begin{align*}
+\pi_1\cdots\pi_k=\xi_1\cdots\xi_m
+\end{align*}
+and
+\begin{align*}
+\alpha_1\cdots\alpha_r=\beta_1\cdots\beta_n
+\end{align*}
+be two pairs of mutually nondegenerate irreducible factorizations with $k>m$ and $n>r$. Then each $\pi_i$ is associate to some $\beta_j$ and each $\xi_1$ is associate to some $\alpha_j$. 
+\end{lemma}
+\lyxframeend{}\lyxframe{Proof}
+\begin{itemize}
+\item <1->The proof uses the fact that equal length factorizations are unique.
+\item <2->Let $a = n-r$ and $b = k - m$. In the factorizations:
+\begin{align*}
+\pi_1^a\cdots\pi_k^a\alpha_1^b\cdots\alpha_r^b=\xi_1^a\cdots\xi_m^a\beta_1^b\cdots\beta_n^b
+\end{align*}
+the lengths are the same since $ak+br=am+bn$. 
+\item <3->Therefore, each $\pi_i$ must appear on the right somewhere. Since the $\pi_i$'s and $\xi_j$'s are non-associate, this means that each $\pi_i$ is an associate of one of the $\beta_j$'s. 
+\item<4->The same argument shows that the $\alpha_i$'s and $\xi_j$'s are associates. 
+\end{itemize}
+
+\lyxframeend{}\lyxframe{Lemma 2}
+\begin{lemma}
+Let $R$ be an OHFD that is not a HFD and $\pi \in R$ a nonprime irreducible. Then $\pi$ cannot be both long and short.
+\end{lemma}
+
+
+\lyxframeend{}\lyxframe{Proof}
+\begin{itemize}
+\item <1->Assume that $\pi_1$ is both long and short.
+\item <2->Then, we have two mutually nondegenerate irreducible factorizations of the following form:
+\begin{align*}
+\pi_1\cdots\pi_k=\xi_1\cdots\xi_m
+\end{align*}
+and
+\begin{align*}
+\pi_1\alpha_2\cdots\alpha_r=\beta_1\cdots\beta_n
+\end{align*}
+\item <3->By the previous Lemma, this implies that $\pi_1$ is an associate of one of the $\xi_j$'s. This contradicts the mutual nondegeneracy of the first pair of factorizations.
+\end{itemize}
+
+
+\lyxframeend{}\section{The Main Result}
+
+
+\lyxframeend{}\subsection{Some Preliminaries }
+
+
+\lyxframeend{}\lyxframe{Master Factorization }
+\begin{definition}%{}
+Let $R$ be an OHFD, and let $\{\pi_{1},\pi_{2},\ldots,\pi_{k}\}$and
+$\{\xi_{1},\xi_{2},\ldots,\xi_{m}\}$ respictevly denote the sets
+of long and short irreducibles in $R$ (up to associates). Among all
+pairs of factorizations
+
+\begin{align*}
+\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}\end{align*}
+
+
+we select one with $a_{1}$ minimal and call this pair of factorizations
+the master factorization.
+
+
+\end{definition}%{}
+
+\lyxframeend{}\lyxframe{An Interesting Result }
+\begin{fact}%{}
+Let $R$ be a an OHFD and let
+
+\begin{align*}
+\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}\end{align*}
+
+
+be the MF. Then any pair of mutually irreducible factorizations of
+this MF. That is, any two mutually nondegenerate irreducible factroizations
+of different lenghts are of the form (up to associates):
+
+\begin{align*}
+\pi_{1}^{ta_{1}}\pi_{2}^{ta_{2}}\cdots\pi_{k}^{ta_{k}}= & \xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}\end{align*}
+
+
+for some $t\geq1$.
+\end{fact}%{}
+
+\lyxframeend{}\subsection{The Main Result}
+
+
+\lyxframeend{}\lyxframe{The Proof}
+\begin{itemize}
+\item To prove this, we assume that $R$ is an OHFD, but not an HFD, then
+show that the MF must not exist, which is a contradiction.
+\item This is done in three cases, but we only discuss one case.
+\end{itemize}
+
+\lyxframeend{}\lyxframe{The Proof}
+
+First, assume that $R$ is and OHFD that is not an HFD. Let the MF
+of $R$ be 
+
+\begin{align*}
+\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}= & \xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}\end{align*}
+
+
+with $\sum_{i=1}^{k}a_{i}>\sum_{i=1}^{m}b_{i}$
+
+
+\lyxframeend{}\lyxframe{The Proof}
+\begin{itemize}
+\item Of the three cases, we consider the case where $k,m>2$
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item Consider the element $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})$
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item Noting that $\xi_{1}^{b_{1}}\xi_{2}^{b_{2}}\cdots\xi_{m}^{b_{m}}=\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}$,
+we see that $\pi_{1}$divides this product. 
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item Not as easy to see, $\pi_{1}$divides neither $\xi_{1}^{b_{1}}$ nor
+$\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+\end{itemize}
+
+\lyxframeend{}\lyxframe{The Proof}
+\begin{itemize}
+\item If $\pi_{1}$does divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+then there is some $c\in R$ such that $c\pi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item If we factor $c$ we see that the factorizations are of unequal lengths;
+$\pi_{1}$ is long so the LHS of this is the long side.
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item By the fact we mentioned, we have $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}=\xi_{1}^{tb_{1}}\xi_{2}^{tb_{2}}\cdots\xi_{m}^{tb_{m}}$
+for some $t$, which implies that $\xi_{1}$ divides $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
+\end{itemize}
+
+\lyxframeend{}\lyxframe{The Proof}
+\begin{itemize}
+\item So we have some $d\in R$ such that $d\xi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item Given that $\xi_{1}$ is short, the above factorizations must be either
+mutually degenerate or of equal lengths.
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item Either, way, $\xi_{1}$ is an associate of one of the $\xi_{i}'s$
+on the RHS. This is a contradiction so $\pi_{1}$does not divide $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+\end{itemize}
+
+\lyxframeend{}\lyxframe{The Proof}
+\begin{itemize}
+\item So, $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})=k\pi_{1}$
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item We can factor $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ into $\alpha_{1},\ldots,\alpha_{s}$
+and $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}})$
+into $\beta_{1},\ldots,\beta_{t}$where the $\alpha_{1}'s$ and $\beta_{i}'s$
+are irreducible. 
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item Thus, $\alpha_{1}\cdots\alpha_{s}$$\beta_{1}\cdots\beta_{t}=k\pi_{1}$ 
+\end{itemize}
+
+\lyxframeend{}\lyxframe{The Proof}
+\begin{itemize}
+\item Since $\pi_{1}$is not associated to any other $\pi_{i}'s$ from the
+previous argument, $\pi_{1}$ is not associated to any of the $\alpha_{1},\ldots,\alpha_{s}$or
+$\beta_{1},\ldots,\beta_{t}$. 
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item So, these are factorizations of different lengths, and in the factorization:
+\begin{align*}
+(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}) & =k\pi_{1}\end{align*}
+The RHS is the long side. 
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item Again, we use the fact we stated and observe that $\xi_{1}$ is an associate of one of
+$\alpha_{1,}\cdots,\alpha_{s}$,$\beta_{1},\cdots,\beta_{t}$, and in particular,
+$\xi_{1}$divides $(\pi_{1}^{a_{1}}-\xi_{1}^{b_{1}})$ or $(\pi_{1}^{a_{1}}\pi_{2}^{a_{2}}\cdots\pi_{k}^{a_{k}}-\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}).$
+\item This means that $\xi_{1}$ divides $\pi_{1}^{a_{1}}$ or $\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$.
+\end{itemize}
+
+\lyxframeend{}\lyxframe{The Proof}
+\begin{itemize}
+\item If $\xi_{1}$ divides $\pi_{1}^{a_{1}}$ then $\pi_{1}^{a_{1}}=c\xi_{1}$.
+The factorizations are of different lengths. As we have done before,
+this leads to a contradiction since $\pi_{1}$ is not associated to
+the other $\pi_{i}^{'}s$. 
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item Otherwise, $c\xi_{1}=\xi_{2}^{b_{2}}\xi_{3}^{b_{3}}\cdots\xi_{m}^{b_{m}}$
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item This means that $\xi_{1}$is associated with one of the $\xi_{i}^{'}s$
+which is a contradiction.
+\end{itemize}
+
+\lyxframeend{}\lyxframe{The Proof}
+\begin{itemize}
+\item Therefore, we have no MF's of this form.
+\end{itemize}
+
+\pause{}
+\begin{itemize}
+\item The proof for the other two cases are similar. 
+\end{itemize}
+
+\lyxframeend{}
+
+\appendix
+
+\lyxframeend{}\section*{Appendix}
+
+
+\lyxframeend{}\subsection*{For Further Reading}
+
+
+\lyxframeend{}\lyxframe{[allowframebreaks]For Further Reading}
+
+\beamertemplatebookbibitems
+\begin{thebibliography}{2}
+\bibitem{Coykendall,Smith1990}Coykendall, Jim and Smith, William. \newblock\emph{On Unique Factorization Domains}.\newblock
+Journal of Algebra, 2011.\beamertemplatearticlebibitems
+
+
+
+\end{thebibliography}
+
+\lyxframeend{}
+\end{document}
